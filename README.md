@@ -1,1 +1,1 @@
-# cuad_qa
+# cuad-train
