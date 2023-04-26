@@ -513,7 +513,7 @@ def main():
                 len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
         # split the train dataset on several mini batch
-        batch_size = 10
+        batch_size = 250
         num_examples = len(train_dataset)
         sliced_dataset = [train_dataset.select(
             range(i, i+batch_size)) for i in range(0, num_examples, batch_size)]
