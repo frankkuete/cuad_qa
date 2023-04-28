@@ -299,7 +299,7 @@ if __name__ == "__main__":
 
     results = get_results("../train_models/legal-bert-small",
                           gt_dict, verbose=True)
-    save_results("./results/legal-bert-small", "../train_models/legal-bert-small", results)
+    save_results("./results", "../train_models/legal-bert-small", results)
 
     results_per_cat = {}
     cat_dict = get_questions_from_csv()
@@ -308,4 +308,4 @@ if __name__ == "__main__":
             "../train_models/legal-bert-small", gt_dict, key, verbose=False)
         results_per_cat.update({key: key_results})
     save_results(
-        "./results/legal-bert-small", "../train_models/legal-bert-small-cat", results_per_cat)
+        "./results", "../train_models/legal-bert-small-cat", results_per_cat)
