@@ -297,14 +297,15 @@ if __name__ == "__main__":
     gt_dict = load_json(test_json_path)
     gt_dict = get_answers(gt_dict)
 
-    results = get_results("./train_models/roberta-base", gt_dict, verbose=True)
-    save_results("./results", "./train_models/roberta-base", results)
+    results = get_results("../train_models/roberta-base",
+                          gt_dict, verbose=True)
+    save_results("./results", "../train_models/roberta-base", results)
 
     results_per_cat = {}
     cat_dict = get_questions_from_csv()
     for key in cat_dict.keys():
         key_results = get_results_per_cat(
-            "./train_models/roberta-base", gt_dict, key, verbose=False)
+            "../train_models/roberta-base", gt_dict, key, verbose=False)
         results_per_cat.update({key: key_results})
     save_results(
-        "./results", "./train_models/roberta-base-categories", results_per_cat)
+        "./results", "../train_models/roberta-base-categories", results_per_cat)

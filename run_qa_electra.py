@@ -517,10 +517,13 @@ def main():
                 len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
         # split the train dataset on several mini batch
-        batch_size = 10
+        batch_size = 200
         num_examples = len(train_dataset)
         sliced_dataset = [train_dataset.select(
             range(i, i+batch_size)) for i in range(0, num_examples, batch_size)]
+        sliced_dataset = [train_dataset.select(
+            range(i, i+batch_size)) if (i+batch_size < num_examples) else train_dataset.select(range(i, num_examples))
+            for i in range(0, num_examples, batch_size)]
         # Create train feature from dataset
         with training_args.main_process_first(desc="train dataset map pre-processing"):
             for i in range(len(sliced_dataset)):
