@@ -1,0 +1,1 @@
+{'name': 'legal-bert-small', 'aupr': 0.3308779961091505, 'prec_at_80_recall': 0.0788387597446118, 'prec_at_90_recall': 0}
