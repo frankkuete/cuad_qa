@@ -10,7 +10,7 @@ python run_qa_electra.py \
   --max_seq_length 512 \
   --max_answer_length 512 \
   --doc_stride 256 \
-  --output_dir ../train_models/electra-base \
+  --output_dir ../train_models/electra-base-2 \
   --overwrite_output_dir \
   --save_steps 10000 \
   --version_2_with_negative
