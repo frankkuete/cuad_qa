@@ -308,4 +308,4 @@ if __name__ == "__main__":
             "../train_models/legal-bert-base", gt_dict, key, verbose=False)
         results_per_cat.update({key: key_results})
     save_results(
-        "./results", "../train_models/legal-bert-base", results_per_cat)
+        "./results", "../train_models/legal-bert-base-cat", results_per_cat)
