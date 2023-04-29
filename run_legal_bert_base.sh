@@ -6,7 +6,7 @@ python run_qa.py \
   --per_device_train_batch_size 16 \
   --per_device_eval_batch_size 16 \
   --learning_rate 1e-5 \
-  --num_train_epochs 6 \
+  --num_train_epochs 8 \
   --max_seq_length 512 \
   --max_answer_length 512 \
   --doc_stride 256 \
