@@ -520,8 +520,6 @@ def main():
         batch_size = 200
         num_examples = len(train_dataset)
         sliced_dataset = [train_dataset.select(
-            range(i, i+batch_size)) for i in range(0, num_examples, batch_size)]
-        sliced_dataset = [train_dataset.select(
             range(i, i+batch_size)) if (i+batch_size < num_examples) else train_dataset.select(range(i, num_examples))
             for i in range(0, num_examples, batch_size)]
         # Create train feature from dataset
