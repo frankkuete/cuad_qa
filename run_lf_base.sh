@@ -7,7 +7,7 @@ python run_qa_longformer.py \
   --per_device_eval_batch_size 4 \
   --learning_rate 1e-5 \
   --num_train_epochs 4 \
-  --max_seq_length 3072 \
+  --max_seq_length 2048 \
   --max_answer_length 512 \
   --doc_stride 256 \
   --output_dir ../train_models/longformer-base \
