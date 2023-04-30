@@ -3,8 +3,8 @@ python run_qa.py \
   --dataset_name cuad \
   --do_train \
   --do_predict \
-  --per_device_train_batch_size 16 \
-  --per_device_eval_batch_size 16 \
+  --per_device_train_batch_size 6 \
+  --per_device_eval_batch_size 6 \
   --learning_rate 1e-5 \
   --num_train_epochs 4 \
   --max_seq_length 4096 \
