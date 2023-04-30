@@ -1,0 +1,1 @@
+{'name': 'electra-large', 'aupr': 0.5298326626477955, 'prec_at_80_recall': 0.49257482293808547, 'prec_at_90_recall': 0}
