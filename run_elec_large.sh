@@ -4,9 +4,9 @@ python run_qa_electra.py \
   --do_train \
   --do_predict \
   --per_device_train_batch_size 8 \
-  --per_device_eval_batch_size 8 \
+  --per_device_eval_batch_size 32 \
   --learning_rate 1e-5 \
-  --num_train_epochs 4 \
+  --num_train_epochs 6 \
   --max_seq_length 512 \
   --max_answer_length 512 \
   --doc_stride 256 \
