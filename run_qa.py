@@ -529,16 +529,6 @@ def main():
                     load_from_cache_file=not data_args.overwrite_cache,
                     desc="Running tokenizer on train dataset",
                 )
-            """
-            train_dataset = train_dataset.map(
-                prepare_train_features,
-                batched=True,
-                num_proc=data_args.preprocessing_num_workers,
-                remove_columns=column_names,
-                load_from_cache_file=not data_args.overwrite_cache,
-                desc="Running tokenizer on train dataset",
-            )
-            """
         train_dataset = concatenate_datasets(sliced_dataset)
         """
         if data_args.max_train_samples is not None:
