@@ -1,1 +1,0 @@
-{'name': 'bert-base-2', 'aupr': 0.3520239745731988, 'prec_at_80_recall': 0.19335511982570805, 'prec_at_90_recall': 0}

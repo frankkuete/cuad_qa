@@ -1,0 +1,19 @@
+{
+    "predict_samples": 200910,
+    "test_HasAns_exact": 68.40836012861736,
+    "test_HasAns_f1": 81.16394459914596,
+    "test_HasAns_total": 1244,
+    "test_NoAns_exact": 62.763784887678696,
+    "test_NoAns_f1": 62.763784887678696,
+    "test_NoAns_total": 2938,
+    "test_best_exact": 70.27737924438068,
+    "test_best_exact_thresh": 0.0,
+    "test_best_f1": 70.57071748068924,
+    "test_best_f1_thresh": 0.0,
+    "test_exact": 64.44285031085604,
+    "test_f1": 68.23719442404055,
+    "test_runtime": 1677.2822,
+    "test_samples_per_second": 119.783,
+    "test_steps_per_second": 9.982,
+    "test_total": 4182
+}
