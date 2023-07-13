@@ -12,7 +12,7 @@ python run_qa.py \
   --overwrite_output_dir \
   --save_steps 10000 \
   --version_2_with_negative \
-  --max_train_samples 100 \
+  --max_train_samples 10 \
   --max_predict_samples 10 \
 
 
