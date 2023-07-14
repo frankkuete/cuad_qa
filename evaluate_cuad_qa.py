@@ -295,9 +295,9 @@ def save_results(save_dir, model_path, results):
 
 if __name__ == "__main__":
     test_json_path = "./cuad-data/test.json"
-    model_path = "./results/bert-base"
-    save_dir = "./results/bert-base"
-    model_path_cat = "./results/bert-base-per-cat"
+    model_path = "./results/deberta-v2-xlarge"
+    save_dir = "./results/deberta-v2-xlarge"
+    model_path_cat = "./results/deberta-v2-xlarge-per-cat"
 
     gt_dict = load_json(test_json_path)
     gt_dict = get_answers(gt_dict)
