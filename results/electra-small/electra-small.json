@@ -1,0 +1,1 @@
+{'name': 'electra-small', 'aupr': 0.27217700721999455, 'prec_at_80_recall': 0.05173863936750535, 'prec_at_90_recall': 0.035563681887065955}

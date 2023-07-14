@@ -203,6 +203,8 @@ def get_prec_at_recall(precisions, recalls, confs, recall_thresh=0.9):
         if recall >= recall_thresh:
             prec_at_recall = prec
             break
+    if prec_at_recall == 0:
+        prec_at_recall = precisions[len(precisions)-1]
     return prec_at_recall, conf
 
 
@@ -230,7 +232,6 @@ def get_results(model_path, gt_dict, verbose=False):
     pred_dict = load_json(predictions_path)
 
     assert sorted(list(pred_dict.keys())) == sorted(list(gt_dict.keys()))
-
     precisions, recalls, confs = get_precisions_recalls(pred_dict, gt_dict)
     prec_at_90_recall, _ = get_prec_at_recall(
         precisions, recalls, confs, recall_thresh=0.9)
@@ -294,18 +295,19 @@ def save_results(save_dir, model_path, results):
 
 if __name__ == "__main__":
     test_json_path = "./cuad-data/test.json"
+    model_path = "./results/bert-base"
+    save_dir = "./results/bert-base"
+    model_path_cat = "./results/bert-base-per-cat"
+
     gt_dict = load_json(test_json_path)
     gt_dict = get_answers(gt_dict)
-
-    results = get_results("../train_models/electra-small-6",
-                          gt_dict, verbose=True)
-    save_results("./results", "../train_models/electra-small-6", results)
+    results = get_results(model_path, gt_dict, verbose=True)
+    save_results(save_dir, model_path, results)
 
     results_per_cat = {}
     cat_dict = get_questions_from_csv()
     for key in cat_dict.keys():
         key_results = get_results_per_cat(
-                "../train_models/electra-small-6", gt_dict, key, verbose=False)
+            model_path, gt_dict, key, verbose=False)
         results_per_cat.update({key: key_results})
-    save_results(
-        "./results", "../train_models/electra-small-cat-6", results_per_cat)
+    save_results(save_dir, model_path_cat, results_per_cat)
